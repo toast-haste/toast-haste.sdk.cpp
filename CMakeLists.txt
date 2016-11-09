@@ -15,5 +15,6 @@ enable_testing()
 
 add_subdirectory(src)
 
-set(CMAKE_CPACK_INCLUDE_FILE "CMakeCPack.cmake")
+set(CPACK_FILE "CMakeCPack.cmake")
+include(${CPACK_FILE})
 

@@ -2,6 +2,7 @@
 #define UDPPEER_H
 
 namespace haste {
+namespace network {
 namespace udp {
 
 	class UdpPeer
@@ -15,6 +16,7 @@ namespace udp {
 	};
 
 } //namespace udp {
+} //namespace network {
 } //namespace haste {
 
 

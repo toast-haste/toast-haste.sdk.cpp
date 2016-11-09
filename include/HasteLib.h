@@ -6,6 +6,7 @@
 #include <vector>
 #include <array>
 #include <map>
+#include <unordered_map>
 
 namespace haste
 {
@@ -15,6 +16,7 @@ namespace haste
   using std::array;
   using std::map;
   using std::vector;
+  using std::unordered_map;
 } //namespace haste
 
 

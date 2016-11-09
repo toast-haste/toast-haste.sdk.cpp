@@ -3,11 +3,19 @@
 
 namespace haste {
 
-class NetworkConnnect{
+	class NetworkConnnect{
 
-public:
-    void Connect (string ip, short port);
-};
+	public:
+		NetworkConnnect();
+		~NetworkConnnect();
+
+		NetworkConnnect(const NetworkConnnect&) = delete;
+		NetworkConnnect operator=(const NetworkConnnect&) = delete;
+
+		void Connect(string ip, int16_t port);
+	private:
+		shared_ptr<HastePeer> _peer;
+	};
 
 } //namespace haste {
 

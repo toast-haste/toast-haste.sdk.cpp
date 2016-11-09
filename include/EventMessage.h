@@ -1,0 +1,4 @@
+#ifndef EVENTMESSAGE_H
+#define EVENTMESSAGE_H
+
+#endif /* EVENTMESSAGE_H */

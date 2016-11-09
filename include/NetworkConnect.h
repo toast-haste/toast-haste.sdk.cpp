@@ -6,7 +6,12 @@ namespace haste {
 class NetworkConnnect{
 
 public:
-    void Connect (string ip, short port);
+	NetworkConnnect();
+	~NetworkConnnect();
+
+	void Connect(string ip, int16_t port);
+private:
+	shared_ptr<HastePeer> _peer;
 };
 
 } //namespace haste {

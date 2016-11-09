@@ -2,13 +2,25 @@
 set(HASTE_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include")
 
 file(GLOB HASTE_HEADERS "${HASTE_INCLUDE_DIR}/*.h")
+file(GLOB HASTE_TCP_HEADERS "${HASTE_INCLUDE_DIR}/tcp/*.h")
+file(GLOB HASTE_UDP_HEADERS "${HASTE_INCLUDE_DIR}/udp/*.h")
+
 file(GLOB HASTE_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+file(GLOB HASTE_TCP_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/tcp/*.cpp")
+file(GLOB HASTE_UDP_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/udp/*.cpp")
 
 include_directories(${HASTE_INCLUDE_DIR})
 
-set(SRCS
+set(HEADERS 
     ${HASTE_HEADERS}
-    ${HASTE_SRCS}
+    ${HASTE_TCP_HEADERS}
+    ${HASTE_UDP_HEADERS}
 )
 
-add_library(HasteClient ${SRCS})
+set(SRCS
+    ${HASTE_SRCS}
+    ${HASTE_TCP_SRCS}
+    ${HASTE_UDP_SRCS}
+)
+
+add_library(HasteClient ${SRCS} ${HEADERS})

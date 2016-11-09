@@ -3,12 +3,12 @@
 
 namespace haste {
 	
-class HastePeer
-{
-public:
-	HastePeer();
-	~HastePeer();
-};
+	class HastePeer
+	{
+	public:
+		HastePeer();
+		~HastePeer();
+	};
 
 } //namespace haste {
 

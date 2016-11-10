@@ -16,7 +16,7 @@ namespace haste {
 
 	void NetworkConnnect::Connect(string ip, int16_t port)
 	{
-
+		cout << "connect called" << endl;
 	}
 
 } //namespace haste {

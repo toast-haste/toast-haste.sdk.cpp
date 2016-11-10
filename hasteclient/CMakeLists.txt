@@ -1,5 +1,6 @@
 
-set(HASTE_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include")
+project(${MODULE_NAME})
+
 set(HASTE_NETWORK_INCLUDE_DIR "${HASTE_INCLUDE_DIR}/network")
 
 file(GLOB HASTE_HEADERS "${HASTE_INCLUDE_DIR}/*.h")
@@ -14,7 +15,7 @@ file(GLOB HASTE_NETWORK_SRCS "${HASTE_NETWORK_SRC_DIR}/*.cpp")
 file(GLOB HASTE_TCP_SRCS "${HASTE_NETWORK_SRC_DIR}/tcp/*.cpp")
 file(GLOB HASTE_UDP_SRCS "${HASTE_NETWORK_SRC_DIR}/udp/*.cpp")
 
-include_directories(${HASTE_INCLUDE_DIR})
+
 
 set(HEADERS 
     ${HASTE_HEADERS}
@@ -30,4 +31,4 @@ set(SRCS
     ${HASTE_UDP_SRCS}
 )
 
-add_library(HasteClient ${SRCS} ${HEADERS})
+add_library(${MODULE_NAME} ${SRCS} ${HEADERS})
